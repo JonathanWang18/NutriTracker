@@ -11,7 +11,7 @@ Welcome to NutriTracker, a web application designed to help users search for foo
 
 ## Usage
 To use NutriTracker, follow these steps:
-1. Visit the NutriTracker website at https://www.nutritracker.com (Replace with the actual URL when available).
+1. Visit the NutriTracker website at (Replace with the actual URL when available).
 2. Use the search bar to find specific food items or browse through the provided categories.
 3. Filter and select food items based on macronutrient content.
 4. Create and manage personalized labels to organize your food choices.
