@@ -1,0 +1,165 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    margin: 0;
+    background: #331c45;
+    
+}
+
+.primarybg {
+    background-image: url("../images/bluefoodbg.webp");
+}
+
+.navstyle {
+    top:5vh;
+    z-index: 7;
+} 
+
+.navcontainer {
+    width: 80%;
+    margin: auto;
+    height: 100%;
+}
+
+
+header {
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    height: 5em;
+    
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+.navtitle {
+    
+    float: left;
+    padding-top: 1vh;
+    color: rgb(225, 223, 233);
+}
+
+header ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    padding: 1 vh, 0 vh, 1 vh;
+    float:right;
+    
+}
+header ul li {
+    height: fit-content;
+    list-style-type: none;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    color:#e2ecf6;
+}
+
+header ul li:hover {
+    background-color: #5ba59e;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&family=Quicksand:wght@600&display=swap');
+.quickfont {
+    font-family: 'Outfit', sans-serif;
+
+    font-family: 'Quicksand', sans-serif;
+}
+
+header li a {
+    color:  #f6f2f2;
+    text-decoration: none;
+    
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.searchbox {
+    margin: 3em;
+    
+    display: flex;
+    
+    justify-content: center;
+}
+
+.trackform {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: 20em;
+    align-items: center;
+    justify-content: center;
+    background:  #e2ecf6 ;
+}
+
+.trackform #query {
+    border:0;
+    outline:0;
+    background-color: #e2ecf6;
+    width: 25em;
+}
+.trackform #query:focus {
+    outline:none!important;
+}
+
+.searchbutton {
+    border: 0;
+    border-radius: 10px;
+    background-color: rgb(110, 85, 202);
+    background-image: url("/static/images/search.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 35px;
+    height:35px;
+}
+
+.searchbutton:active {
+    background-color: rgb(185, 201, 255);
+}
+
+.jumbotron {
+    height: 50px;
+    width: 50vw;
+    background-color: #fcfcfc;
+    border-radius: 40px;
+    margin: 0 auto 2em auto;
+    
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+
+  .card {
+    height: 60vh;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: #ffffff;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .cardcontainer {
+    padding: 2px 16px;
+  }

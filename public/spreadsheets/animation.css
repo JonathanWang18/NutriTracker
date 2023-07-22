@@ -1,0 +1,39 @@
+
+
+#kitchen {
+    
+    width:100%;
+    height:100vh;
+    background-image: url("../images/counterbg.jpg");
+    background-size: cover;
+    overflow:hidden;
+}
+
+.boardstyle {
+    position: absolute;
+    width: 55vw;
+    height: 55vh;
+    filter: drop-shadow(4px 6px 6px #222);
+    top:30%;
+    left:20%;
+}
+
+.madeleine {
+    position: absolute;
+    width: 45vw;
+    height:65vh;
+    left: 15%;
+    top: 5%;
+    filter: drop-shadow(2px 2px 2px #222);
+
+}
+
+.toast {
+    position: absolute;
+    width: 31vw;
+    height: 38vh;
+    top: 75%;
+    left: 65%;
+    filter: drop-shadow(2px 3px 3px #222);
+
+}
