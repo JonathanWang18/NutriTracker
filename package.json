@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devRun": "nodemon -e js,mustache index.js"
+    "devRun": "nodemon -e js,html index.js"
   },
   "author": "",
   "license": "ISC",
