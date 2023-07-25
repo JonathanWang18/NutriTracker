@@ -28,7 +28,7 @@ router.get('/', (req, reply) => {
           const resultLength = Object.keys(value.text).length;
           console.log(resultLength);
           const results = value.hints.map((x)=>{return {label: x.food.label, brand: x.food.brand, cal: Math.round(x.food.nutrients.ENERC_KCAL), protein: Math.round(x.food.nutrients.PROCNT*100)/100, fat: Math.round(x.food.nutrients.FAT*100)/100, carb: Math.round(x.food.nutrients.CHOCDF*100)/100} }).slice(0,5)
-          reply.json({results: results});
+          reply.send({results: results});
 
         }) 
 })
