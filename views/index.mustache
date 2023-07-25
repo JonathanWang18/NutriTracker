@@ -26,24 +26,25 @@
         <div class = "contents">
             <img class = "boardstyle" src = "/static/images/cutboard.png"/>
             <img class = "madeleine" id = "madeleine" src = "/static/images/madeleine.png"/>
-            <img class = "toast" src = "/static/images/toastplate.png"/>
+            <img class = "coffee" src = "/static/images/latte.png"/>
         </div>
     </div>
+
     <div class="searchbox" id ="searchbarfood">
-        <form action ="/foodsearch" method="get" class="trackform" >
-            <input type="text" placeholder = "Search Food" name="searchbar" id="query" required>
-            <input type="submit" value="" class="searchbutton">
-        </form>
+        <div class = "trackform">
+            <input type="text" placeholder = "Search Food" name="searchbar" id="query">
+            <button class="searchbutton"> </button>
+        </div>
     </div> 
+
+
     <div class="card">
         <p class="cardcontainer">
-            {{#results}}
-                <b>{{label}} <br></b>
-                <p>Calories: {{cal}} Protein: {{protein}} Fat: {{fat}} Carbs:{{carb}}</p>
-                
+            
 
-            {{/results}}
+        </p>
     </div>
+    <script src = "/static/submit.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/paroller.js@1.4.7/dist/jquery.paroller.min.js "></script>
