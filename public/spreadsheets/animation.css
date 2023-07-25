@@ -28,12 +28,12 @@
 
 }
 
-.toast {
+.coffee {
     position: absolute;
-    width: 31vw;
-    height: 38vh;
-    top: 75%;
-    left: 65%;
+    width: 30vw;
+    height: 85vh;
+    top: 55%;
+    left: 95%;
     filter: drop-shadow(2px 3px 3px #222);
 
 }

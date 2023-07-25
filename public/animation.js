@@ -6,8 +6,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-gsap.set('.madeleine', {xPercent:-225, autoAlpha: 0})
-gsap.set('.toast', {xPercent: 250, autoAlpha: 1})
+gsap.set('.madeleine', {xPercent:-225, autoAlpha: 1})
+gsap.set('.toast', {autoAlpha: 1})
 
 var controller = new ScrollMagic.Controller();
 
@@ -32,13 +32,13 @@ tween.to('.madeleine', {
     yPercent: -20,
 }, 'start');
 
-tween.to('.toast', {
+tween.to('.coffee', {
     autoAlpha: 1,
     y:0, 
     duration: 3,
     stagger:1,
-    xPercent: -10,
-    yPercent: -35,
+    xPercent: -110,
+    yPercent: -15,
 
 }, '-=4');
 
