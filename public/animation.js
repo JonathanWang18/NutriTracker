@@ -41,12 +41,3 @@ tween.to('.coffee', {
     yPercent: -15,
 
 }, '-=4');
-
-tween.to()
-/*var scene = new ScrollMagic.Scene({
-    triggerElement: '.choppedcarrots',
-    duration: "50%",
-    triggerHook: 0.25
-})
-.setTween(tween)
-.addTo(controller);*/

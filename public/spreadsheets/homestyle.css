@@ -10,7 +10,12 @@ body {
 }
 
 .primarybg {
-    background-image: url("../images/bluefoodbg.webp");
+    background-color: #08AEEA;
+    background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+
+
+
+
 }
 
 .navstyle {
@@ -26,7 +31,11 @@ body {
 
 
 header {
-    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    
+    background-image: linear-gradient( 111.4deg,  rgba(238,113,113,1) 1%, rgba(246,215,148,1) 58% );
+
+
+
     height: 5em;
     
 }
@@ -42,7 +51,7 @@ header::after {
     
     float: left;
     padding-top: 1vh;
-    color: rgb(225, 223, 233);
+    color: rgb(254, 254, 255);
 }
 
 header ul {
@@ -60,11 +69,11 @@ header ul li {
     text-align: center;
     border-radius: 5px;
     padding: 10px;
-    color:#e2ecf6;
+    color:#f7f8f8;
 }
 
 header ul li:hover {
-    background-color: #5ba59e;
+    background-color: #fd8e4e;
 }
 
 
@@ -120,8 +129,8 @@ header li a {
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
-    width: 35px;
-    height:35px;
+    width: 4vw;
+    height: 4vh;
 }
 
 .searchbutton:active {
@@ -143,23 +152,33 @@ header li a {
     width: 100%;
   }
 
-  .card {
-    height: 60vh;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  .cards {
+    height: 600px;
     transition: 0.3s;
-    background-color: #ffffff;
     width: 45%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10vh;
     margin-bottom: 10vh;
+    
 
   }
   
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  .cards:hover {
+    /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);*/
   }
   
   .cardcontainer {
     padding: 2px 16px;
   }
+
+  .foodItem {
+    margin-bottom: 2em;
+    
+  }
+
+  .stats {
+    display: inline-flex;
+    justify-content: space-around;
+    margin-right: 4em;
+  } 
