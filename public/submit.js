@@ -1,4 +1,5 @@
 
+
 function getData() {
     const URL = '/foodsearch';
     const param = new URLSearchParams()
@@ -19,7 +20,7 @@ function getData() {
             document.getElementsByClassName('cards')[0].innerHTML = '';
         }
         console.log("WORKING WITH JSON")
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 10; i++) {
             var item = document.createElement('div')
             item.classList.add('card')
             item.classList.add('foodItem')
@@ -27,9 +28,14 @@ function getData() {
             body.classList.add('cardbody')
             var cardtitle = document.createElement('p')
             cardtitle.classList.add('card-title')
-            
+            cardtitle.classList.add('titleStyle')
 
-            
+
+            var brandItem = reply['results'][i].brand;
+            if (brandItem === undefined) {
+                brandItem = 'Generic'
+              }
+            const brandlabel = document.createTextNode(brandItem);
             const titlelabel = document.createTextNode(reply['results'][i].label)
             const calories = document.createTextNode('Calories: ' + reply['results'][i].cal)
             const protein = document.createTextNode('Protein: ' + reply['results'][i].protein)
@@ -45,6 +51,7 @@ function getData() {
             cardtitle.appendChild(titlelabel);
             
             body.appendChild(cardtitle)
+            body.appendChild(brandlabel)
             var cardtext = document.createElement('div')
             cardtext.classList.add('card-text')
 

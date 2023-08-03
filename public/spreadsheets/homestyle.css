@@ -13,9 +13,6 @@ body {
     background-color: #08AEEA;
     background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
 
-
-
-
 }
 
 .navstyle {
@@ -153,14 +150,14 @@ header li a {
   }
 
   .cards {
-    height: 600px;
+    height: 60vh;
     transition: 0.3s;
     width: 45%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10vh;
     margin-bottom: 10vh;
-    
+    overflow: auto;
 
   }
   
@@ -175,6 +172,10 @@ header li a {
   .foodItem {
     margin-bottom: 2em;
     
+  }
+
+  .titleStyle {
+    font-weight: bold;
   }
 
   .stats {
