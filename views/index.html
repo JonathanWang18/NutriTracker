@@ -17,9 +17,28 @@
             <h2 class ="navtitle quickfont">NutriTracker</h2>
             <nav>
                 <ul>
-                    <li><a href="index"> Meal Tracker</a></li>
-                    <li><a href = "#">Calorie Requirement</a></li>
-                    <li><a href="#"> Edit Lists</a></li>
+                    <li>
+                        <input type = "checkbox" id = "displayLogin">
+                        <label for = "displayLogin" class = "navLogin"> Login</label>
+                        <div class = "popup" id ="displayLogin">
+                            <div class = "wrap">
+                                <div class = "logincontent">
+                                    <div class ="box">
+                                        <form class ="loginform"> 
+                                            <button onclick="exitLogin()"> X </button>
+                                            <h2> Login</h2>
+                                            <label class = "userlabel"> Username</label>
+                                            <input class = "userbar" type = "text" >
+                                            <label class = "passlabel"> Password</label>
+                                            <input class = "passbar" type = "text" >
+                                            <button class = "loginbutton"> Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
                 </ul>
             </nav>
         </div>
@@ -43,8 +62,11 @@
         
 
     </ul>
+    
+
 
     <script src = "/static/submit.js"></script>
+    <script src = "/static/login.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/paroller.js@1.4.7/dist/jquery.paroller.min.js "></script>

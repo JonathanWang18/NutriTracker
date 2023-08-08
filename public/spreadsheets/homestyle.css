@@ -183,3 +183,91 @@ header li a {
     justify-content: space-around;
     margin-right: 4em;
   } 
+
+  .popup {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:rgba(0,0,0,0.8);
+    display: none;
+  }
+
+  #displayLogin {
+    display: none;
+  }
+
+  #displayLogin:checked ~ .popup {
+    display: block
+  }
+
+  
+
+  .wrap {
+
+    margin: 70px auto;
+    padding: 20px auto;
+    background: #e7e7e7;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    
+  }
+
+
+  .wrap .logincontent {
+    max-height: 30%;
+    overflow: auto;
+  }
+
+  .box {
+    border-radius: 5px;
+    background-color: #e7e7e7;
+    padding: 20px 0;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+  }
+
+  
+
+  .loginform {
+    align-items: center;
+}
+
+  .loginform h2 {
+    margin: auto;
+    margin-bottom: 2vh;
+    color: rgb(0,0,0);
+    content:'';
+    display: block; 
+  }
+  .userbar {    
+    margin: auto;
+    margin-bottom: 2em;
+    content:'';
+    display: block; 
+  }
+
+  .passbar {
+    margin: auto;
+
+    content:'';
+    display: block; 
+  }
+
+  .loginbutton {
+    margin: auto;
+
+    content:'';
+    display: block; 
+  }
+
+  .userlabel, .passlabel{
+    color: black;
+    left: 3em;
+  }
+
+  .loginexit {
+    
+  }
