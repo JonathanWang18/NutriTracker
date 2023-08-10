@@ -14,18 +14,18 @@
 <body class="primarybg">
     <header class ="navstyle sticky">
         <div class="navcontainer">
-            <h2 class ="navtitle quickfont">NutriTracker</h2>
             <nav>
+                <h2 class ="navtitle quickfont">NutriTracker</h2>
                 <ul>
                     <li>
                         <input type = "checkbox" id = "displayLogin">
                         <label for = "displayLogin" class = "navLogin"> Login</label>
-                        <div class = "popup" id ="displayLogin">
+                        <div class = "popup">
                             <div class = "wrap">
                                 <div class = "logincontent">
                                     <div class ="box">
                                         <form class ="loginform"> 
-                                            <button onclick="exitLogin()"> X </button>
+                                            <button id = "openLogin"> X </button>
                                             <h2> Login</h2>
                                             <label class = "userlabel"> Username</label>
                                             <input class = "userbar" type = "text" >
@@ -38,8 +38,8 @@
                             </div>
                         </div>
                     </li>
-                    
                 </ul>
+                
             </nav>
         </div>
     </header>
@@ -51,19 +51,17 @@
         </div>
     </div>
 
-    <div class="searchbox" id ="searchbarfood">
-        <div class = "trackform">
-            <input type="text" placeholder = "Search Food" name="searchbar" id="query">
-            <button class="searchbutton"> </button>
-        </div>
-    </div> 
-
-    <ul class="cards">
-        
-
-    </ul>
-    
-
+    <div class = "resultContainer">
+        <div class="searchbox" id ="searchbarfood">
+            <div class = "trackform">
+                <input type="text" placeholder = "Search Food" name="searchbar" id="query">
+                <button class="searchbutton"> </button>
+            </div>
+        </div> 
+        <ul class="cards">
+            
+        </ul>
+    </div>
 
     <script src = "/static/submit.js"></script>
     <script src = "/static/login.js"></script>
