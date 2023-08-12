@@ -51,7 +51,7 @@
         </div>
     </div>
 
-    <div class = "resultContainer">
+    <div class = "resultContainer primarybg">
         <div class="searchbox" id ="searchbarfood">
             <div class = "trackform">
                 <input type="text" placeholder = "Search Food" name="searchbar" id="query">
@@ -59,8 +59,20 @@
             </div>
         </div> 
         <ul class="cards">
-            
+            <template id = "cardTemp">
+                <div class = "card foodItem">
+                    <div class = "cardbody">
+                        <div class = "cardtitle">
+                            <p class= "card-title titlestyle"> </p>
+                        </div>
+                        <div>
+                            <p>Protein: <span class = "proteinstats"></span>Carbs: <span class = "carbstats"></span> Fat: <span class = "fatstats"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </template>
         </ul>
+
     </div>
 
     <script src = "/static/submit.js"></script>

@@ -1,6 +1,6 @@
-var loginOpen = document.getElementById("openLogin")
-var navLogin = document.getElementById("displayLogin")
-var popup = document.getElementsByClassName("popup")[0];
+let loginOpen = document.getElementById("openLogin")
+let navLogin = document.getElementById("displayLogin")
+let popup = document.getElementsByClassName("popup")[0];
 
 
 function closeLogin(event) {

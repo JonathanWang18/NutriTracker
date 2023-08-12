@@ -16,16 +16,22 @@ function getData() {
         return Promise.reject(res)
     })
     .then((reply) => {
+        const total = reply['results'].length
+        const pageSize = 10;
+        const numPages = Math.ceil(total / pageSize)
         if (document.getElementsByClassName('cards')[0].childNodes.length > 0) {
             document.getElementsByClassName('cards')[0].innerHTML = '';
         }
         console.log("WORKING WITH JSON")
-        for (var i = 0; i < 10; i++) {
+        var cardContain = document.getElementsByClassName("cards")[0]
+        cardContain.classList.add('cardcontainer')
+        for (var i = 0; i < pageSize; i++) {
             var item = document.createElement('div')
             item.classList.add('card')
             item.classList.add('foodItem')
             var body = document.createElement('div')
             body.classList.add('cardbody')
+            
             var cardtitle = document.createElement('p')
             cardtitle.classList.add('card-title')
             cardtitle.classList.add('titleStyle')
@@ -64,6 +70,9 @@ function getData() {
             }
             body.appendChild(cardtext)
             item.appendChild(body)
+            if (i % 2 == 0) {
+                item.classList.add("grayBG")
+            }
             document.getElementsByClassName('cards')[0].appendChild(item);
         }
         //document.getElementsByClassName('cardcontainer')[0].innerText = reply['results'][0].label;
