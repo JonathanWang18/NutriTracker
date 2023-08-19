@@ -1,6 +1,7 @@
 
 
 let results = []
+let currentQuery = ''
 
 function createCard(index) {
     
@@ -24,7 +25,11 @@ function buildResult(pageSize, pageNum) {
     const total = results.length
     console.log(total)
     const numPages = Math.ceil(total / pageSize)
-    
+    let cardContainer = document.getElementsByClassName('cards')[0]
+    let cardList = cardContainer.getElementsByClassName('foodItem')
+    while (cardList[0]) {
+        cardContainer.removeChild(cardList[0]);
+    }
     for (let i = 0; i < pageSize; i++) {
         createCard(i)
     }
@@ -38,6 +43,10 @@ function getData() {
     if (document.getElementById('query').value == "") {
         return;
     }
+    else if (document.getElementById('query').value == currentQuery){
+        return
+    }
+    currentQuery = document.getElementById('query').value
     fetch(URL+'?'+param.toString()).then((res) => {
         if (res.ok) {
             console.log("RES OK")
@@ -49,7 +58,7 @@ function getData() {
     .then((reply) => {
         const pageSize = 10;
         results = reply['results']
-        
+        console.log("FETCHING FOOD RESULTS")
         buildResult(pageSize, 0)
     })
     .catch((error) => {
