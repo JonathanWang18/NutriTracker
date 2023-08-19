@@ -14,9 +14,9 @@ function createCard(index) {
     cardClone.querySelector(".fatstats").innerText = results[index].fat
     cardClone.querySelector(".fatstats").innerText = results[index].brand
     /*if (index % 2 == 0) {
-        cardClone.querySelector(card).add("grayBG")
+        cardClone.querySelector(card).add("grayBG") // DOES NOT WORK 
     }*/
-
+    
     document.getElementsByClassName('cards')[0].appendChild(cardClone);
 
 
@@ -75,7 +75,11 @@ function createCard(index) {
 function buildResult(pageSize, pageNum) {
     const total = reply['results'].length
     const numPages = Math.ceil(total / pageSize)
-    for (let i = 0; i < pageSize; i++) {
+    const startPage = 10 * pageNum
+    if (pageNum > 0) { //if currentPage is past page 1 pagination, add 1 to starting foodResult index
+        startPage += 1
+    }
+    for (let i = startPage; i < pageSize; i++) {
         createCard(i);
     }
     
@@ -100,7 +104,7 @@ function getData() {
         const pageSize = 10;
         results = reply['results']
         
-        buildResult(pageSize, 0)
+        buildResult(pageSize, 0) // Page 1 denoted as 0
     })
     .catch((error) => {
         console.log("Something went wrong.", error);

@@ -144,7 +144,7 @@ header li a {
   } 
   
   .cards {
-    min-height: 55vh;
+    min-height: 65vh;
     height: 100%;
     transition: 0.3s;
     width: 45%;

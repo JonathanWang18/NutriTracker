@@ -1,6 +1,69 @@
 
 
+let results = []
+
+function createCard(index) {
+    
+    let temp = document.getElementsByTagName("template")[0];
+    let clone = temp.content.cloneNode(true);
+    console.log(results[index])
+    let brandName = 'Generic'
+    if (results[index].brand == undefined) {
+        results[index].brand = brandName
+    }
+    clone.querySelector('.card-title').innerText = results[index].label
+    clone.querySelector('.brandName').innerText = results[index].brand
+    clone.querySelector('.proteinstats').innerText = results[index].protein
+    clone.querySelector('.carbstats').innerText = results[index].carb
+    clone.querySelector('.fatstats').innerText = results[index].fat
+    document.getElementsByClassName('cards')[0].appendChild(clone)
+    // console.log("createCard works so far")
+}
+
+function buildResult(pageSize, pageNum) {
+    const total = results.length
+    console.log(total)
+    const numPages = Math.ceil(total / pageSize)
+    
+    for (let i = 0; i < pageSize; i++) {
+        createCard(i)
+    }
+    
+}
+
 function getData() {
+    const URL = '/foodsearch';
+    const param = new URLSearchParams()
+    param.append('searchbar', document.getElementById('query').value)
+    if (document.getElementById('query').value == "") {
+        return;
+    }
+    fetch(URL+'?'+param.toString()).then((res) => {
+        if (res.ok) {
+            console.log("RES OK")
+            return res.json()
+        }
+    console.log("RES NOT OK")
+        return Promise.reject(res)
+    })
+    .then((reply) => {
+        const pageSize = 10;
+        results = reply['results']
+        
+        buildResult(pageSize, 0)
+    })
+    .catch((error) => {
+        console.log("Something went wrong.", error);
+    }) 
+}
+document.querySelector('#query').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      getData()
+    }
+})
+document.getElementsByClassName('searchbutton')[0].addEventListener("click", getData)
+
+/*function getData() {
     const URL = '/foodsearch';
     const param = new URLSearchParams()
     param.append('searchbar', document.getElementById('query').value)
@@ -86,4 +149,4 @@ document.querySelector('#query').addEventListener('keypress', function (e) {
       getData()
     }
 })
-document.getElementsByClassName('searchbutton')[0].addEventListener("click", getData)
+document.getElementsByClassName('searchbutton')[0].addEventListener("click", getData)*/
