@@ -58,7 +58,7 @@
                 <button class="searchbutton"> </button>
             </div>
         </div> 
-        <ul class="cards">
+        <div class="cards">
             <template id = "foodCard">
                 <div class = "card foodItem">
                     <div class = "cardbody">
@@ -72,9 +72,19 @@
                     </div>
                 </div>
             </template>
-        </ul>
-
+        </div>
+        <div class= "pagination-container">
+            <button class="pagination-button" id="prev-button" title="Previous page" aria-label="Previous page">
+                &lt;
+            </button>
+            <div id="pagination-numbers">
+            </div>
+            <button class="pagination-button" id="next-button" title="Next page" aria-label="Next page">
+                &gt;
+            </button>            
+        </div>
     </div>
+    
 </body>
 <script src = "/static/submit.js"></script>
 <script src = "/static/login.js"></script>

@@ -148,7 +148,7 @@ header li a {
     height: 100%;
     transition: 0.3s;
     width: 45%;
-    margin: 0 auto 10vh auto;
+    margin: 0 auto 2vh auto;
   }
   
   
@@ -262,3 +262,34 @@ header li a {
     color: black;
     left: 3em;
   }
+
+  .pagination-container {
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    justify-content: center;
+  }
+  
+  .pagination-number,
+  .pagination-button{
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: none;
+    margin: 0.25rem 0.25rem 2vh;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: .2rem;
+    
+  }
+  
+  .pagination-number:hover,
+  .pagination-button:not(.disabled):hover {
+    background: #fff;
+  }
+  
+  .pagination-number.active {
+    color: #fff;
+    background: #0085b6;
+  }
+  

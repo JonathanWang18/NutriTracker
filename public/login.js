@@ -15,7 +15,6 @@ function openLogin(event) {
 }
 
 window.onclick = function (event) {
-    console.log("Click Works\n")
     if (event.target == document.getElementsByClassName("wrap")[0]) {
       closeLogin();
     }
