@@ -134,22 +134,8 @@ document.querySelector('#query').addEventListener('keypress', function (e) {
 })
 document.getElementsByClassName('searchbutton')[0].addEventListener("click", getData)
 
-/*window.addEventListener('load', () => {
-    document.querySelectorAll('.pagination-number').forEach((button) => {
-        const pageIndex = Number(button.getAttribute("page-index"))
-        console.log('QuerySelector RUn')
-        if (pageIndex) {
-            button.addEventListener('click', () => {
-                console.log('Accessing pageIndex ' + index)
-                setCurrentPage(pageIndex)
-            })
-        }
-    })
-})*/
-
 document.querySelector('.pagination-container').addEventListener('click', function (e) {
     console.log(e.target.id)
-    // But only alert for elements that have an alert-button class
     let cardContainer = document.getElementsByClassName('cards')[0]
     let cardList = cardContainer.getElementsByClassName('foodItem')
     if (e.target.classList.contains('pagination-number')) {

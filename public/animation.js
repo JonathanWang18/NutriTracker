@@ -29,7 +29,7 @@ tween.to('.madeleine', {
     duration:3, 
     stagger:1,
     xPercent: -60,
-    yPercent: -20,
+    yPercent: 10,
 }, 'start');
 
 tween.to('.coffee', {

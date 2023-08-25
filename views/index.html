@@ -10,39 +10,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
 <body class="primarybg">
-    <header class ="navstyle sticky">
-        <div class="navcontainer">
-            <nav>
-                <h2 class ="navtitle quickfont">NutriTracker</h2>
-                <ul>
-                    <li>
-                        <input type = "checkbox" id = "displayLogin">
-                        <label for = "displayLogin" class = "navLogin"> Login</label>
-                        <div class = "popup">
-                            <div class = "wrap">
-                                <div class = "logincontent">
-                                    <div class ="box">
-                                        <form class ="loginform"> 
-                                            <button id = "openLogin"> X </button>
-                                            <h2> Login</h2>
-                                            <label class = "userlabel"> Username</label>
-                                            <input class = "userbar" type = "text" >
-                                            <label class = "passlabel"> Password</label>
-                                            <input class = "passbar" type = "text" >
-                                            <button class = "loginbutton"> Submit</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                
-            </nav>
+  
+
+    <nav class="nav">
+        <img class="nav__collapser" src="/static/images/burger.png" alt="Collapse">
+        <a href="/" class="nav__brand">NUTRITRACKER</a>
+
+        <div class="nav__collapsable nav__cta">
+            <a href="/" class = "cta">Add Foods</a>
+
+            <div class="nav__cta">
+                <a href="#" class="cta">My Stats</a>
+                <a href="#" class="cta cta--bold">My List</a>
+            </div>
         </div>
-    </header>
+
+    </nav>
+
     <div id = "kitchen"> 
         <div class = "contents">
             <img class = "boardstyle" src = "/static/images/cutboard.png"/>
@@ -65,8 +54,14 @@
                         <div class = "cardtitle">
                             <p class= "card-title titlestyle"> </p>
                         </div>
+                        <div class = "itemControl">
+                            <button class = "add"><svg viewBox="0 0 448 512" width="100" title="plus">
+                                <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+                              </svg></button>
+                        </div>
                         <div>
                             <p>Brand: <span class = "brandName"></span></p>
+                            
                             <p>Protein: <span class = "proteinstats"></span>Carbs: <span class = "carbstats"></span> Fat: <span class = "fatstats"></span></p>
                         </div>
                     </div>
