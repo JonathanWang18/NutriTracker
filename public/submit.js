@@ -1,5 +1,3 @@
-
-
 let results = []
 let currentQuery = ''
 const pageTotal = 10;
@@ -112,12 +110,14 @@ function getData() {
     }
     currentQuery = document.getElementById('query').value
     fetch(URL+'?'+param.toString()).then((res) => {
+        console.log("fetch after")
         if (res.ok) {
             return res.json()
         }
         return Promise.reject(res)
     })
     .then((reply) => {
+        
         let currentPage = 1;
         results = reply['results']
         buildResult(pageTotal, currentPage)
@@ -160,3 +160,4 @@ document.querySelector('.pagination-container').addEventListener('click', functi
         }
     }   
   });
+
